@@ -26,12 +26,25 @@ namespace WpfLoginLocalize
 
         private void BtnOk_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("ok");
         }
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
+            //MessageBox.Show("cancel");
+            this.Close();
+        }
 
+        private void lblSignup_Click(object sender, MouseButtonEventArgs e)
+        {
+            //MessageBox.Show("click");
+            SignWindow sw = new SignWindow();
+            sw.ShowDialog();
+            if (sw.DialogResult == false)
+            {
+                //MessageBox.Show("close");
+                this.Close();
+            }
         }
     }
 }

@@ -30,6 +30,11 @@ namespace WpfLoginLocalize
             //MessageBox.Show("Load");
             LoginWindow lw = new LoginWindow();
             lw.ShowDialog();
+            if (lw.DialogResult == false)
+            {
+                //MessageBox.Show("false");
+                this.Close();
+            }
         }
     }
 }
