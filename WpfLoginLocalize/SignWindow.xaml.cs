@@ -19,9 +19,27 @@ namespace WpfLoginLocalize
     /// </summary>
     public partial class SignWindow : Window
     {
+        //public static bool DlgResult { get; set; }
+
         public SignWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnOk_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            LoginWindow.DlgResult = true;
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnLocalize_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

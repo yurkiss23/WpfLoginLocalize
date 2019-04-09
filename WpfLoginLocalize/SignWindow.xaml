@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLoginLocalize"
         mc:Ignorable="d"
-        Title="SignWindow" Height="350" Width="450" WindowStartupLocation="CenterScreen">
-    <Grid>
-        
-    </Grid>
+        Title="SignWindow" Height="200" Width="250" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Label x:Name="lblLogin" Content="Логін" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Bottom" Height="25" FontSize="14"/>
+        <TextBox x:Name="txtLogin" Width="150" FontSize="16"/>
+        <Label x:Name="lblPass" Content="Пароль" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Bottom" Height="25" FontSize="14" Padding="5,5,5,1"
+               />
+        <TextBox x:Name="txtPass" Width="150" FontSize="16"/>
+        <Grid Height="30" Width="200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnOk" Content="OK" Height="20" Width="70" Click="BtnOk_Click"/>
+            <Button x:Name="btnCancel" Content="Скасувати" Height="20" Width="70"
+                    Grid.Column="1" Click="BtnCancel_Click"/>
+        </Grid>
+        <Button x:Name="btnLocalize" Content="RU" Height="20" Width="20" Margin="0,5,20,0"
+                    HorizontalAlignment="Right" Click="BtnLocalize_Click"/>
+    </StackPanel>
 </Window>

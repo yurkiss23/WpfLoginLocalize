@@ -14,7 +14,7 @@
                VerticalContentAlignment="Bottom" Height="25" FontSize="14" Padding="5,5,5,1"
                />
         <TextBox x:Name="txtPass" Width="150" FontSize="16"/>
-        <Grid Height="35" Width="200">
+        <Grid Height="30" Width="200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -23,7 +23,12 @@
             <Button x:Name="btnCancel" Content="Скасувати" Height="20" Width="70"
                     Grid.Column="1" Click="BtnCancel_Click"/>
         </Grid>
-        <Label x:Name="lblSignup" Content="Зареєструватися?" HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Bottom" Cursor="Hand" MouseLeftButtonDown="lblSignup_Click"/>
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="lblSignup" Content="Зареєструватися?"
+               HorizontalContentAlignment="Left" Margin="20,0,70,0"
+               Cursor="Hand" MouseLeftButtonDown="lblSignup_Click"/>
+            <Button x:Name="btnLocalize" Content="RU" Height="20" Width="20" Click="BtnLocalize_Click"
+                    />
+        </StackPanel>
     </StackPanel>
 </Window>
