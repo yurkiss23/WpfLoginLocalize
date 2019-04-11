@@ -26,10 +26,12 @@
         </Grid>
         <StackPanel Orientation="Horizontal">
             <Label x:Name="lblSignup" Content="Зареєструватися?"
-               HorizontalContentAlignment="Left" Margin="20,0,70,0"
+               HorizontalContentAlignment="Left" Margin="20,0,60,0"
                Cursor="Hand" MouseLeftButtonDown="lblSignup_Click"/>
-            <Button x:Name="btnLocalize" Content="RU" Height="20" Width="20" Click="BtnLocalize_Click"
-                    />
+            <ComboBox x:Name="cbLang" Width="40" SelectionChanged="cbLang_Select">
+                <ComboBoxItem Content="en"/>
+            </ComboBox>
+            <!--<Button x:Name="btnLocalize" Content="RU" Height="20" Width="20" Click="BtnLocalize_Click"/>-->
         </StackPanel>
     </StackPanel>
 </Window>

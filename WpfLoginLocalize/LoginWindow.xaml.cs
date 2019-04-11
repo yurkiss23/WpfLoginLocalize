@@ -52,12 +52,9 @@ namespace WpfLoginLocalize
             }
         }
 
-        private void BtnLocalize_Click(object sender, RoutedEventArgs e)
+        private void cbLang_Select(object sender, SelectionChangedEventArgs e)
         {
             MessageBox.Show("localize");
-            System.Threading.Thread.CurrentThread.CurrentUICulture =
-                new System.Globalization.CultureInfo("uk");
-            
         }
     }
 }
