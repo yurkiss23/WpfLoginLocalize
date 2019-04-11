@@ -28,8 +28,11 @@
             <Label x:Name="lblSignup" Content="Зареєструватися?"
                HorizontalContentAlignment="Left" Margin="20,0,60,0"
                Cursor="Hand" MouseLeftButtonDown="lblSignup_Click"/>
-            <ComboBox x:Name="cbLang" Width="40" SelectionChanged="cbLang_Select">
+            <ComboBox x:Name="cbLang" SelectedIndex="0" Width="40"
+                      SelectionChanged="cbLang_Select">
                 <ComboBoxItem Content="en"/>
+                <ComboBoxItem Content="uk"/>
+                <ComboBoxItem Content="ru"/>
             </ComboBox>
             <!--<Button x:Name="btnLocalize" Content="RU" Height="20" Width="20" Click="BtnLocalize_Click"/>-->
         </StackPanel>

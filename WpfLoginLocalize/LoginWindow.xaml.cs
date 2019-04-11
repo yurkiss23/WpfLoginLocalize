@@ -55,6 +55,7 @@ namespace WpfLoginLocalize
         private void cbLang_Select(object sender, SelectionChangedEventArgs e)
         {
             MessageBox.Show("localize");
+
         }
     }
 }
