@@ -10,7 +10,8 @@
         Loaded="Window_Loaded">
     <DockPanel>
         <Menu x:Name="MainMenu" DockPanel.Dock="Top" Height="30">
-            <MenuItem x:Name="FileMenu" Header="Файл" Height="30"/>
+            <MenuItem x:Name="FileMenu" Header="{x:Static p:Resources.File}"
+                      Height="30"/>
             <MenuItem x:Name="EditMenu" Header="Правка" Height="30"/>
             <MenuItem x:Name="HelpMenu" Header="Довідка" Height="30"/>
         </Menu>
