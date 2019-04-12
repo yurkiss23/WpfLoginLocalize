@@ -55,7 +55,34 @@ namespace WpfLoginLocalize
 
                 System.Threading.Thread.CurrentThread.CurrentUICulture = value;
 
+                ResourceDictionary dict = new ResourceDictionary();
 
+                switch (value.Name)
+                {
+                    case "uk":
+                        break;
+                    case "ru":
+                        break;
+                    default:
+                        break;
+                }
+
+                ResourceDictionary oldDict = (from d in Application.Current.Resources.MergedDictionaries
+                                              where d.Source != null && d.Source.OriginalString.StartsWith("")
+                                              select d).First();
+
+                if (oldDict != null)
+                {
+                    int ind = Application.Current.Resources.MergedDictionaries.IndexOf(oldDict);
+                    Application.Current.Resources.MergedDictionaries.Remove(oldDict);
+                    Application.Current.Resources.MergedDictionaries.Insert(ind, dict);
+                }
+                else
+                {
+                    Application.Current.Resources.MergedDictionaries.Add(dict);
+                }
+
+                LangChanged(Application.Current, new EventArgs());
             }
         }
     }
