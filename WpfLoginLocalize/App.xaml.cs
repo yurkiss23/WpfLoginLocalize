@@ -26,12 +26,15 @@ namespace WpfLoginLocalize
 
         public App()
         {
-            //System.Threading.Thread.CurrentThread.CurrentUICulture =
-            //    new System.Globalization.CultureInfo("uk");
+            InitializeComponent();
+            LangChanged += App_LangChanged;
+
             listLangs.Clear();
             listLangs.Add(new CultureInfo("en"));
             listLangs.Add(new CultureInfo("uk"));
             listLangs.Add(new CultureInfo("ru"));
+
+            Lang=WpfLoginLocalize.Properties.Settings.Default.defaultlanguage
         }
 
         public static event EventHandler LangChanged;
@@ -84,6 +87,11 @@ namespace WpfLoginLocalize
 
                 LangChanged(Application.Current, new EventArgs());
             }
+        }
+
+        private void App_LangChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
